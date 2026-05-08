@@ -23,7 +23,6 @@
   ],
   "optionalDependencies": {
     "@afterpython/nbm-cli-darwin-arm64": "0.1.3",
-    "@afterpython/nbm-cli-darwin-x64": "0.1.3",
     "@afterpython/nbm-cli-linux-x64": "0.1.3"
   },
   "repository": {

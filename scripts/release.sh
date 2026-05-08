@@ -52,7 +52,7 @@ fi
 
 # Bump versions atomically. We use a tiny inline node to keep JSON formatting clean.
 echo "-- Bumping all four packages to $VERSION"
-for pkg in npm/nbm npm/cli-darwin-arm64 npm/cli-darwin-x64 npm/cli-linux-x64; do
+for pkg in npm/nbm npm/cli-darwin-arm64 npm/cli-linux-x64; do
   node -e "
     const fs = require('fs');
     const path = '$pkg/package.json';
@@ -67,7 +67,7 @@ for pkg in npm/nbm npm/cli-darwin-arm64 npm/cli-darwin-x64 npm/cli-linux-x64; do
   "
 done
 
-git add npm/nbm/package.json npm/cli-darwin-arm64/package.json npm/cli-darwin-x64/package.json npm/cli-linux-x64/package.json
+git add npm/nbm/package.json npm/cli-darwin-arm64/package.json npm/cli-linux-x64/package.json
 git commit -m "release: v$VERSION"
 git tag "v$VERSION"
 

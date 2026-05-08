@@ -4,7 +4,7 @@
  *
  * Usage: deno run -A scripts/build-binary.ts <plat-arch> [--version <semver>]
  *
- *   plat-arch: darwin-arm64 | darwin-x64 | linux-x64
+ *   plat-arch: darwin-arm64 | linux-x64
  *   --version: version to bake into the binary's `nbm --version` output.
  *              Defaults to the version field in npm/nbm/package.json.
  *
@@ -22,7 +22,6 @@ import { dirname, fromFileUrl, join, resolve } from 'jsr:@std/path@1';
 
 const TARGETS: Record<string, string> = {
   'darwin-arm64': 'aarch64-apple-darwin',
-  'darwin-x64': 'x86_64-apple-darwin',
   'linux-x64': 'x86_64-unknown-linux-gnu',
 };
 
@@ -34,7 +33,7 @@ const WEB_BUILD = join(REPO_ROOT, 'apps/web/build');
 const VERSION_RE = /export const VERSION = '[^']*';/;
 
 function usage(): never {
-  console.error('Usage: build-binary.ts <darwin-arm64|darwin-x64|linux-x64> [--version <semver>]');
+  console.error('Usage: build-binary.ts <darwin-arm64|linux-x64> [--version <semver>]');
   Deno.exit(2);
 }
 

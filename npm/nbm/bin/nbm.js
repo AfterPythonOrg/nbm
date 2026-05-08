@@ -7,7 +7,6 @@ const { spawnSync } = require('node:child_process');
 
 const PACKAGES = {
   'darwin-arm64': '@afterpython/nbm-cli-darwin-arm64',
-  'darwin-x64': '@afterpython/nbm-cli-darwin-x64',
   'linux-x64': '@afterpython/nbm-cli-linux-x64',
 };
 

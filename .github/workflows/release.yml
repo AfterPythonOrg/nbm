@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*'
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     name: Build ${{ matrix.plat }}
@@ -14,8 +17,6 @@ jobs:
         include:
           - plat: darwin-arm64
             runner: macos-14
-          - plat: darwin-x64
-            runner: macos-13
           - plat: linux-x64
             runner: ubuntu-24.04
     runs-on: ${{ matrix.runner }}
@@ -55,7 +56,7 @@ jobs:
           echo "$out" | grep -q "${{ steps.version.outputs.version }}" || {
             echo "Version smoke test failed"; exit 1;
           }
-        if: matrix.plat == 'darwin-arm64' || matrix.plat == 'darwin-x64' || matrix.plat == 'linux-x64'
+        if: matrix.plat == 'darwin-arm64' || matrix.plat == 'linux-x64'
 
       - name: Upload binary artifact
         uses: actions/upload-artifact@v4
@@ -93,7 +94,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for plat in darwin-arm64 darwin-x64 linux-x64; do
+          for plat in darwin-arm64 linux-x64; do
             mkdir -p npm/cli-$plat/bin
             cp artifacts/nbm-$plat/nbm npm/cli-$plat/bin/nbm
             chmod +x npm/cli-$plat/bin/nbm
@@ -104,7 +105,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for plat in darwin-arm64 darwin-x64 linux-x64; do
+          for plat in darwin-arm64 linux-x64; do
             (cd npm/cli-$plat && npm publish --access public --provenance)
           done
 
