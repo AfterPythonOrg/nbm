@@ -1,6 +1,6 @@
 {
   "name": "@afterpython/nbm",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Notebook Manager — a unified CLI and web dashboard for running Jupyter, Marimo, and Pluto notebooks.",
   "bin": {
     "nbm": "bin/nbm.js"
@@ -22,8 +22,8 @@
     "x64"
   ],
   "optionalDependencies": {
-    "@afterpython/nbm-cli-darwin-arm64": "0.1.3",
-    "@afterpython/nbm-cli-linux-x64": "0.1.3"
+    "@afterpython/nbm-cli-darwin-arm64": "0.1.4",
+    "@afterpython/nbm-cli-linux-x64": "0.1.4"
   },
   "repository": {
     "type": "git",
