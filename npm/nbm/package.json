@@ -28,9 +28,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/softwareentrepreneer/nbm.git"
+    "url": "git+https://github.com/AfterPythonOrg/nbm.git"
   },
-  "homepage": "https://github.com/softwareentrepreneer/nbm",
+  "homepage": "https://github.com/AfterPythonOrg/nbm",
   "license": "Apache-2.0",
   "author": "Stephen Yau <softwareentrepreneer@gmail.com>",
   "keywords": [
