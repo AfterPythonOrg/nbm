@@ -16,7 +16,7 @@ A unified CLI and web dashboard for running and managing Jupyter, Marimo, and Pl
 ## Installation
 
 ```sh
-npm install -g nbm
+npm install -g @afterpython/nbm
 ```
 
 Supported platforms: macOS arm64, macOS x64, Linux x64.

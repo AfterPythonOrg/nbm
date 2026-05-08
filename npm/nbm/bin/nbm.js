@@ -6,9 +6,9 @@
 const { spawnSync } = require('node:child_process');
 
 const PACKAGES = {
-  'darwin-arm64': '@nbm/cli-darwin-arm64',
-  'darwin-x64': '@nbm/cli-darwin-x64',
-  'linux-x64': '@nbm/cli-linux-x64',
+  'darwin-arm64': '@afterpython/nbm-cli-darwin-arm64',
+  'darwin-x64': '@afterpython/nbm-cli-darwin-x64',
+  'linux-x64': '@afterpython/nbm-cli-linux-x64',
 };
 
 const key = `${process.platform}-${process.arch}`;
@@ -28,7 +28,7 @@ try {
 } catch (e) {
   console.error(
     `nbm: ${pkg} is not installed. ` +
-      `Try reinstalling: npm install -g nbm --force`,
+      `Try reinstalling: npm install -g @afterpython/nbm --force`,
   );
   console.error(e && e.message ? e.message : String(e));
   process.exit(1);

@@ -60,7 +60,7 @@ for pkg in npm/nbm npm/cli-darwin-arm64 npm/cli-darwin-x64 npm/cli-linux-x64; do
     j.version = '$VERSION';
     if (j.optionalDependencies) {
       for (const k of Object.keys(j.optionalDependencies)) {
-        if (k.startsWith('@nbm/cli-')) j.optionalDependencies[k] = '$VERSION';
+        if (k.startsWith('@afterpython/nbm-cli-')) j.optionalDependencies[k] = '$VERSION';
       }
     }
     fs.writeFileSync(path, JSON.stringify(j, null, 2) + '\n');

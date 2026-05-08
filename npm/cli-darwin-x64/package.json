@@ -1,6 +1,6 @@
 {
-  "name": "@nbm/cli-darwin-x64",
-  "version": "0.0.1-dev.1",
+  "name": "@afterpython/nbm-cli-darwin-x64",
+  "version": "0.1.0",
   "description": "nbm CLI binary for macOS x64. Installed via the `nbm` package.",
   "files": [
     "bin/nbm"
