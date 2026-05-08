@@ -1,0 +1,20 @@
+.local/
+.vscode/
+node_modules/
+.DS_Store
+.env
+.env.*
+!.env.example
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+/bin/
+
+# Build outputs (populated by scripts/build-binary.ts and CI)
+/dist/
+/npm/cli-darwin-arm64/bin/
+/npm/cli-darwin-x64/bin/
+/npm/cli-linux-x64/bin/
+/npm/nbm/README.md
+/npm/nbm/LICENSE
+*.tgz

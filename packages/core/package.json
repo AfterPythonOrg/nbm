@@ -1,0 +1,14 @@
+{
+    "name": "@nbm/core",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "exports": {
+        ".": "./src/index.ts",
+        "./types": "./src/types.ts",
+        "./const": "./src/const.ts"
+    },
+    "devDependencies": {
+        "@types/node": "^24.12.2"
+    }
+}

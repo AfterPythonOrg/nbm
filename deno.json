@@ -1,0 +1,4 @@
+{
+  "workspace": ["apps/cli", "packages/core"],
+  "nodeModulesDir": "none"
+}

@@ -1,0 +1,34 @@
+{
+  "mode": "embedded",
+  "openTabs": [
+    { "id": "a1", "name": "analysis.py", "loaded": true },
+    { "id": "a2", "name": "train.ipynb", "loaded": true },
+    { "id": "a3", "name": "scratch.py", "loaded": false }
+  ],
+  "running": [
+    { "id": "a1", "name": "analysis.py" },
+    { "id": "b1", "name": "api.py" },
+    { "id": "a2", "name": "train.ipynb" }
+  ],
+  "workspaces": [
+    {
+      "name": "research",
+      "notebooks": [
+        { "id": "a1", "name": "analysis.py", "running": true },
+        { "id": "a2", "name": "train.ipynb", "running": true },
+        { "id": "a4", "name": "churn-model.ipynb", "running": false }
+      ]
+    },
+    {
+      "name": "demo",
+      "notebooks": [
+        { "id": "b1", "name": "api.py", "running": true },
+        { "id": "b2", "name": "plots.jl", "running": false }
+      ]
+    },
+    {
+      "name": "default",
+      "notebooks": [{ "id": "a3", "name": "scratch.py", "running": false }]
+    }
+  ]
+}

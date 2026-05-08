@@ -1,0 +1,19 @@
+{
+  "name": "@nbm/cli-linux-x64",
+  "version": "0.0.1-dev.1",
+  "description": "nbm CLI binary for Linux x64. Installed via the `nbm` package.",
+  "files": [
+    "bin/nbm"
+  ],
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softwareentrepreneer/nbm.git"
+  }
+}

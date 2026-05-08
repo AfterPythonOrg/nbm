@@ -1,0 +1,43 @@
+{
+  "name": "nbm",
+  "version": "0.0.1-dev.1",
+  "description": "Notebook Manager — a unified CLI and web dashboard for running Jupyter, Marimo, and Pluto notebooks.",
+  "bin": {
+    "nbm": "./bin/nbm.js"
+  },
+  "files": [
+    "bin/nbm.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "optionalDependencies": {
+    "@nbm/cli-darwin-arm64": "0.0.1-dev.1",
+    "@nbm/cli-darwin-x64": "0.0.1-dev.1",
+    "@nbm/cli-linux-x64": "0.0.1-dev.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softwareentrepreneer/nbm.git"
+  },
+  "homepage": "https://github.com/softwareentrepreneer/nbm",
+  "license": "Apache-2.0",
+  "author": "Stephen Yau <softwareentrepreneer@gmail.com>",
+  "keywords": [
+    "notebook",
+    "jupyter",
+    "marimo",
+    "pluto",
+    "cli"
+  ]
+}

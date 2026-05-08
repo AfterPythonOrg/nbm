@@ -1,0 +1,23 @@
+{
+  "name": "nbm",
+  "private": true,
+  "version": "0.0.1-dev.1",
+  "type": "module",
+  "description": "Notebook Manager",
+  "main": "index.js",
+  "scripts": {
+    "dev:web": "pnpm --dir apps/web dev",
+    "dev:cli": "pnpm --dir apps/cli dev",
+    "check": "pnpm -r check",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Stephen Yau <softwareentrepreneer@gmail.com>",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@10.33.3",
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}

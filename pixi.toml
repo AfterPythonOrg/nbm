@@ -1,0 +1,19 @@
+[workspace]
+authors = ["softwareentrepreneer <softwareentrepreneer@gmail.com>"]
+channels = ["conda-forge", "https://repo.prefix.dev/julia-forge"]
+platforms = ["osx-arm64"]
+
+[activation.env]
+PATH = "$PIXI_PROJECT_ROOT/bin:$PATH"
+
+[tasks]
+
+[dependencies]
+nodejs = ">=25.8.2"
+deno = ">=2.7.14"
+python = ">=3.12"
+julia = ">=1.10.4"
+
+[pypi-dependencies]
+marimo = { version = ">=0.23.5", extras = ["recommended", "lsp"] }
+notebook = ">=7.5.6"
