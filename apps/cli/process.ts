@@ -116,7 +116,14 @@ export async function spawnDetached(
 
   const pidStartTs = getProcessStartTime(pid);
   if (!pidStartTs) {
-    throw new Error(`Could not capture start time for pid ${pid}`);
+    // ps -p PID returned nothing, which on macOS/Linux means the process is
+    // already gone. Almost always: the spawned binary exited within a few ms
+    // (missing module, bad arg, etc.). Surface the log so the user sees the
+    // real error instead of "Could not capture start time".
+    const logTail = existsSync(logPath) ? readFileSync(logPath, 'utf8').trim() : '';
+    throw new Error(
+      `Process (pid ${pid}) exited before nbm could track it.\n--- log ---\n${logTail || '(empty)'}\n--- end log ---`,
+    );
   }
 
   hooks?.onPidCaptured?.({ pid, pidStartTs });
